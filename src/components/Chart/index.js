@@ -10,19 +10,19 @@ export default function Chart({ newData, title, labelY }) {
     <React.Fragment>
       <Title>{title}</Title>
       <ResponsiveContainer>
-        <LineChart data={newData} margin={{ top: 0, right: 16, bottom: 16, left: 24 }}>
+        <LineChart data={newData} margin={{ top: 54, right: 16, bottom: 54, left: 14 }}>
           <XAxis dataKey="name" stroke={theme.palette.text.secondary} />
 
           <YAxis stroke={theme.palette.text.secondary}>
             <Label
               angle={270}
               position="left"
-              style={{ textAnchor: 'middle', fill: theme.palette.text.primary }}
+              style={{ fontSize: '12', textAnchor: 'middle', fill: theme.palette.text.primary }}
             >
               {labelY}
             </Label>
           </YAxis>
-          <Line type="monotone" dataKey="quantity" stroke="#006D77" dot={false} />
+          <Line type="monotone" dataKey="quantity" stroke="#E2645A" dot={false} />
         </LineChart>
       </ResponsiveContainer>
     </React.Fragment>

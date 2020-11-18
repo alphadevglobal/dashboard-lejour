@@ -5,8 +5,8 @@ import Title from '../Title';
 
 const useStyles = makeStyles({
   content: {
-    marginTop: 20,
-    fontSize: 36,
+    marginTop: 40,
+    fontSize: 32,
     textAlign: 'center'
   }
 });

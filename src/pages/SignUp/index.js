@@ -5,10 +5,11 @@ import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+
+import logoImg from '../../assets/lejour_logo.svg'
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -19,7 +20,9 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    width: 86,
+    height: 86,
+    backgroundColor: '#fafafa',
   },
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -27,6 +30,8 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    backgroundColor: '#86D0CB',
+    color: '#FFF',
   },
 }));
 
@@ -38,7 +43,7 @@ export default function SignUp() {
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
+          <img width={80} height={80} src={logoImg} alt="logo le-jour"/>
         </Avatar>
         <Typography component="h1" variant="h5">
           Sign up
@@ -54,6 +59,7 @@ export default function SignUp() {
                 fullWidth
                 id="firstName"
                 label="Primeiro Nome"
+                color="secondary"
                 autoFocus
               />
             </Grid>
@@ -65,6 +71,7 @@ export default function SignUp() {
                 id="lastName"
                 label="Último Nome"
                 name="lastName"
+                color="secondary"
                 autoComplete="lname"
               />
             </Grid>
@@ -76,6 +83,7 @@ export default function SignUp() {
                 id="email"
                 label="Email"
                 name="email"
+                color="secondary"
                 autoComplete="email"
               />
             </Grid>
@@ -88,6 +96,7 @@ export default function SignUp() {
                 label="Password"
                 type="password"
                 id="password"
+                color="secondary"
                 autoComplete="current-password"
               />
             </Grid>
@@ -103,7 +112,7 @@ export default function SignUp() {
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
-              <Link to="/" variant="body2">
+              <Link style={{ textDecoration: 'none', color: '#E2645A' }} to="/" variant="body2">
                 Já tem um conta? Sign in
               </Link>
             </Grid>

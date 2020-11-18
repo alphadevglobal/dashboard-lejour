@@ -7,9 +7,6 @@ import {
   AppBar, 
   Toolbar, 
   List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   Typography,
   Divider,
   IconButton,
@@ -20,12 +17,14 @@ import {
 
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import DashboardIcon from '@material-ui/icons/Dashboard';
 
 import Chart from '../../components/Chart';
-import CustomCards from '../../components/CustomCard';
+import CustomCard from '../../components/CustomCard';
+import ListItem from '../../components/ListItem';
 
 import getMostPopular from '../../utils/getMostPopular'
+
+import logoImg from '../../assets/lejour_logo_branco.svg'
 
 import api from '../../services/api'
 
@@ -263,6 +262,14 @@ export default function Dashboard() {
           <Typography component="h1" variant="h5" color="inherit" noWrap className={classes.title}>
             Dashboard
           </Typography>
+
+          <img 
+            style={{ marginRight: 25 }} 
+            width={60} 
+            height={60} 
+            src={logoImg} 
+            alt="logo le-jour"
+          />
         </Toolbar>
       </AppBar>
 
@@ -282,12 +289,7 @@ export default function Dashboard() {
         <Divider />
 
         <List>
-          <ListItem button>
-            <ListItemIcon>
-              <DashboardIcon />
-            </ListItemIcon>
-            <ListItemText primary="Dashboard" />
-          </ListItem>
+          <ListItem />
         </List>
 
         <Divider />
@@ -301,7 +303,7 @@ export default function Dashboard() {
             {/* Recent Deposits */}
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-                <CustomCards 
+                <CustomCard 
                   title="Valor médio por casamento" 
                   content={weddingAverageBudget} 
                   avaregeOfGuests
@@ -312,7 +314,7 @@ export default function Dashboard() {
             {/* Recent Deposits */}
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-                <CustomCards 
+                <CustomCard 
                   title="Média de convidados" 
                   content={avaregeOfGuests}
                 />
@@ -322,7 +324,7 @@ export default function Dashboard() {
             {/* Recent Deposits */}
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-                <CustomCards 
+                <CustomCard 
                   title="Fornecedor mais solicitado" 
                   content={`Id: ${mostPopularVendor.name}`}
                 />
@@ -332,7 +334,7 @@ export default function Dashboard() {
             {/* Recent Deposits */}
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-                <CustomCards 
+                <CustomCard 
                   title="Ctg. de serviço mais solicitada" 
                   content={mostPopularVendorCategory.name}
                 />
