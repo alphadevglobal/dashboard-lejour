@@ -1,6 +1,9 @@
 # About
 
 Demo: https://dash-bi-lejour.netlify.app/
+Apresentation Live/Demo: https://youtu.be/pZl4Krg5JAA
+backend repo: https://github.com/mirusky/fiap-lejour-challenge
+Example env back: https://protected-meadow-43828.herokuapp.com
 
 Develop mode
 1. `yarn install`
